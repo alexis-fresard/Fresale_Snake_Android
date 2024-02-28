@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Snake</string>
+    <string name="textView_points"> : 0</string>
+    <string name="textView_Delay">Délai : </string>
+    <string name="textView_gameOver">Game Over !</string>
+    <string name="button_play">Jouer</string>
+    <string name="button_param">Paramètres</string>
+    <string name="button_quit">Quitter</string>
+    <string name="button_validate">Valider</string>
+    <string name="button_retray">Réesayer</string>
+    <string name="button_menu">Menu</string>
+    <string name="textViewParamFruitApparition">Apparition de nouveaux fruits</string>
+    <string name="SwitchAfter5Point">Après 5 points</string>
+    <string name="SwitchAfter15Points">Après 15 points</string>
+    <string name="TextViewInformation">Snake V1 - Alexis Frésard 2024</string>
+    <string name="defaultButton">Par défaut</string>
+    <string name="TextViewTypeFruit">Type de fruits</string>
+    <string name="TextViewParamNbreBodyAtBegin">Taille de base du serpent</string>
+    <string name="textViewParamSensibility">Sensibilité de l\'accéléromètre</string>
+    <string name="textViewParamNbreFruit">Nombre de fruits au départ</string>
+    <string name="editTextNumberHint">Valeur entre 1 et 5</string>
+
+</resources>

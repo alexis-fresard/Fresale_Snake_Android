@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".paramActivity">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/button_param"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toTopOf="@+id/textViewParamNbreFruit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewParamNbreFruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewParamNbreFruit"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="25sp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNumberFruitAtBegin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+        <EditText
+            android:id="@+id/editTextNumberFruitAtBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="@string/editTextNumberHint"
+            android:textAlignment="center"
+            android:backgroundTint="@color/green"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/textViewParamSensibility"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewParamNbreFruit" />
+
+        <TextView
+            android:id="@+id/textViewParamSensibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textViewParamSensibility"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/sliderSensibility"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberFruitAtBegin" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderSensibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="1.0"
+            android:valueFrom="5.0"
+            android:valueTo="20.0"
+            app:layout_constraintBottom_toTopOf="@+id/textViewParamNbreBodyAtBegin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewParamSensibility"
+            app:thumbColor="@color/limeGreen"
+            app:trackColorActive="@color/green"
+            app:haloColor="@color/green"
+            app:tickColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textViewParamNbreBodyAtBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TextViewParamNbreBodyAtBegin"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/sliderNbreBodyAtBegin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sliderSensibility" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderNbreBodyAtBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="1.0"
+            android:valueFrom="1.0"
+            android:valueTo="5.0"
+            app:layout_constraintBottom_toTopOf="@+id/textViewParamTypeFruit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewParamNbreBodyAtBegin"
+            app:thumbColor="@color/limeGreen"
+            app:trackColorActive="@color/green"
+            app:haloColor="@color/green"
+            app:tickColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textViewParamTypeFruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/TextViewTypeFruit"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroupTypeFruit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/sliderNbreBodyAtBegin" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTypeFruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewParamFruitAppearAt5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewParamTypeFruit">
+
+            <ImageButton
+                android:id="@+id/imageButtonApple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/apple" />
+
+            <ImageButton
+                android:id="@+id/imageButtonBanana"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/banana" />
+
+            <ImageButton
+                android:id="@+id/imageButtonCherry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/cherry" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewParamFruitAppearAt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/textViewParamFruitApparition"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toTopOf="@+id/switchFruitAppearAt5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupTypeFruit" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchFruitAppearAt5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toTopOf="@+id/switchFruitAppearAt15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/textViewParamFruitAppearAt5"
+            app:thumbColor="@color/limeGreen"
+            android:text="@string/SwitchAfter5Point" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchFruitAppearAt15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toTopOf="@+id/validateButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/switchFruitAppearAt5"
+            app:thumbColor="@color/limeGreen"
+            android:text="@string/SwitchAfter15Points"/>
+
+        <Button
+            android:id="@+id/validateButton"
+            android:layout_width="170dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="200dp"
+            android:text="@string/button_validate"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="22sp"
+            android:backgroundTint="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchFruitAppearAt15" />
+
+        <Button
+            android:id="@+id/defaultButton"
+            android:layout_width="170dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="200dp"
+            android:text="@string/defaultButton"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchFruitAppearAt15" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
